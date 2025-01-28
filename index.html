@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .counter-container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .count {
+            font-size: 75px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 25px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Counter App</h1>
+        <div class="count" id="counter">0</div>
+        <button id="increment">Increment</button>
+        <button id="decrement">Decrement</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+        let counter = document.getElementById('counter');
+        let incrementButton = document.getElementById('increment');
+        let decrementButton = document.getElementById('decrement');
+        let resetButton = document.getElementById('reset');
+        let count = 0;
+        incrementButton.onclick = function() {
+            count++;
+            counter.textContent = count;
+        };
+        decrementButton.onclick = function() {
+            count--;
+            counter.textContent = count;
+        };
+        resetButton.onclick = function() {
+            count = 0;
+            counter.textContent = count;
+        };
+    </script>
+</body>
+</html>
+
